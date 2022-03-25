@@ -21,14 +21,4 @@ describe("App", () => {
 
     expect(banner).toBeInTheDocument();
   });
-
-  test("강의 목록이 렌더링 되어야 한다.", () => {
-    render(<Index />);
-
-    const lectureList = screen.getByTitle("lectureList", {
-      name: "",
-    });
-
-    expect(lectureList).toBeInTheDocument();
-  });
 });
