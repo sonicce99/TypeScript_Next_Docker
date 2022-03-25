@@ -1,14 +1,34 @@
 import { render, screen } from "@testing-library/react";
-import Home from "../pages/index";
+import Index from "../pages/index";
 
-describe("Home", () => {
-  it("renders a heading", () => {
-    render(<Home />);
+describe("App", () => {
+  test("메뉴가 렌더링 되어야 한다.", () => {
+    render(<Index />);
 
-    const heading = screen.getByRole("heading", {
-      name: /welcome to next\.js!/i,
+    const menu = screen.getByRole("navigation", {
+      name: "fastcampus",
     });
 
-    expect(heading).toBeInTheDocument();
+    expect(menu).toBeInTheDocument();
+  });
+
+  test("배너가 렌더링 되어야 한다.", () => {
+    render(<Index />);
+
+    const banner = screen.getByRole("banner", {
+      name: "",
+    });
+
+    expect(banner).toBeInTheDocument();
+  });
+
+  test("강의 목록이 렌더링 되어야 한다.", () => {
+    render(<Index />);
+
+    const lectureList = screen.getByTitle("lectureList", {
+      name: "",
+    });
+
+    expect(lectureList).toBeInTheDocument();
   });
 });

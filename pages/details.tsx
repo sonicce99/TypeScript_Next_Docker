@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Details: NextPage = () => {
   return (
     <>
       <nav aria-label="fastcampus">fastcampus</nav>
@@ -10,4 +10,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Details;
