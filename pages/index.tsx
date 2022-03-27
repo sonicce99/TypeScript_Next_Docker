@@ -1,11 +1,14 @@
+import Menu from "../components/Menu";
+import Banner from "../components/Banner";
+import LectureGroup from "../components/Lecture/LectureGroup";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <>
-      <nav aria-label="fastcampus">fastcampus</nav>
-      <div role="banner">banner</div>
-      <div title="lectureList">lectureList</div>
+      <Menu />
+      <Banner />
+      <LectureGroup />
     </>
   );
 };
